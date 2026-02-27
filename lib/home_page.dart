@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
           floatingActionButton: FloatingActionButton(
             onPressed: () {
               setState(() {
-                _model.increment();
+                value.increment();
                 });
               },
             tooltip: 'Increment',
