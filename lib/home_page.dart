@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'counter_model.dart';
+import 'package:provider/provider.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -31,8 +32,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return Builder(
-      builder: (context) {
+    return Consumer<CounterModel>(
+      builder: (context, model, child) {
         return Scaffold(
           appBar: AppBar(
             // TRY THIS: Try changing the color here to a specific color (to
